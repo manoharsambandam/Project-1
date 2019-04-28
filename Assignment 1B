@@ -1,0 +1,31 @@
+Answers to Channels and Kernels
+1.Kernels are filters to extract feature of specific kind. 
+   What we did in the assignment is a filter for example edge, blur or sharpen filter
+Channels are information containers which contain data more typically extracted out using the kernel / filters.
+In the simplistic case a raw color image itself contains 3 channels R,G,B ( or other formats)
+   Each channel representing the intensity of these channel data at each pixel point in the image
+   
+2. Why should we only (well mostly) use 3x3 Kernels?
+  a. These kernel size are used typically because they are implemented in hardware processing engines
+  and can be accelerated when the application kernels are of the same size
+  b. A 3x3 kernel will have a lot less parameters compared to a 5x5 or a 7x7 and, I guess, it is shown to have the same 
+  functional performance as the the larger kernels and with a lot less computation the same desired functionality can be achieved by 3x3 kernels
+  
+3.How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 (show calculations)
+    199x199 | 197 x 197 | 195 x 195 | 193x 193 |191 x 191 |
+    189x189 | 187 x 187 | 185 x 185 | 183x 183 |181 x 181 |
+    179 ....
+    169
+    159
+    149
+    139
+    129
+    119
+     99
+     ..
+     11x11| 9x9 | 7x7 | 5x5 | 3x3 | 1x1
+     
+     Total of 5 x 18 = 90 stages of 3x3 kernel operations to reach the 1x1 final output
+     In each stage  the 3x3 matrix multiplication happens n-1 x n-1 times where n ranges from 199 to 3 in steps 
+     
+     
