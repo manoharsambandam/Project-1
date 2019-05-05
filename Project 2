@@ -327,15 +327,31 @@
       "metadata": {
         "id": "t5Drhhzo2mFD",
         "colab_type": "code",
-        "colab": {}
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 198
+        },
+        "outputId": "62a23ec0-b6bd-4246-868a-9e44dc1782fa"
       },
       "source": [
         "model.compile(loss='categorical_crossentropy',\n",
         "             optimizer='adam',\n",
         "             metrics=['accuracy'])"
       ],
-      "execution_count": 0,
-      "outputs": []
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-3-a0822003bc3a>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m model.compile(loss='categorical_crossentropy',\n\u001b[0m\u001b[1;32m      2\u001b[0m              \u001b[0moptimizer\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m'adam'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m              metrics=['accuracy'])\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'model' is not defined"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "code",
@@ -346,7 +362,7 @@
           "base_uri": "https://localhost:8080/",
           "height": 105
         },
-        "outputId": "6193b3ac-23cf-4d2b-ecc8-b23aca223692"
+        "outputId": "3e7b4d4d-b4e3-42a9-956b-21d7fc3b9d0c"
       },
       "source": [
         "model.fit(X_train, Y_train, batch_size=32, nb_epoch=10, verbose=1)"
@@ -365,7 +381,7 @@
           "output_type": "stream",
           "text": [
             "Epoch 1/10\n",
-            " 6368/60000 [==>...........................] - ETA: 2:08:47 - loss: 14.2754 - acc: 0.1143"
+            "14624/60000 [======>.......................] - ETA: 1:48:57 - loss: 14.3039 - acc: 0.1126"
           ],
           "name": "stdout"
         }
@@ -376,26 +392,58 @@
       "metadata": {
         "id": "A8JsJjEi2sV6",
         "colab_type": "code",
-        "colab": {}
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 164
+        },
+        "outputId": "50b72b53-349e-4ee7-a191-2ba09a40c2a1"
       },
       "source": [
         "score = model.evaluate(X_test, Y_test, verbose=0)"
       ],
-      "execution_count": 0,
-      "outputs": []
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-4-ae8ff228c086>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mscore\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mmodel\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mevaluate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mX_test\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mY_test\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mverbose\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'model' is not defined"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "code",
       "metadata": {
         "id": "7AzAvFoV2vHb",
         "colab_type": "code",
-        "colab": {}
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 164
+        },
+        "outputId": "58670cf7-0d3d-443e-a66b-00548885a39b"
       },
       "source": [
         "print(score)"
       ],
-      "execution_count": 0,
-      "outputs": []
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-5-4405d376f933>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mscore\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'score' is not defined"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "code",
